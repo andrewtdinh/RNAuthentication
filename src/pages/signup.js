@@ -65,8 +65,12 @@ export default class signup extends Component {
         password: '',
         loaded: true
       });
-
     });
+  }
 
+  goToLogin(){
+    this.props.navigator.push({
+      component: Login
+    });
   }
 }
