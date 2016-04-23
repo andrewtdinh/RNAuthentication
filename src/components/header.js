@@ -26,3 +26,23 @@ export default class header extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  header: {
+    padding: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 20,
+    flex: 1
+  },
+  header_item: {
+    paddingLeft: 10,
+    paddingRight: 10
+  },
+  header_text: {
+    color: '#000',
+    fontSize: 18
+  }
+});
+
+AppRegistry.registerComponent('header', () => header);
