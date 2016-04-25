@@ -98,3 +98,5 @@ export default class login extends Component {
     });
   }
 }
+
+AppRegistry.registerComponent('login', () => login);
