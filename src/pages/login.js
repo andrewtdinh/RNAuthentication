@@ -20,3 +20,16 @@ import Firebase from 'firebase';
 let app = new Firebase("YOUR-FIREBASE-APP-URL");
 
 import styles from '../styles/common-styles.js';
+
+export default class login extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      email: '',
+      password: '',
+      loaded: true
+    }
+  }
+}
