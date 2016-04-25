@@ -31,7 +31,7 @@ export default class login extends Component {
       loaded: true
     }
   }
-  
+
   render(){
     return (
       <View style={styles.container}>
@@ -65,5 +65,30 @@ export default class login extends Component {
         </View>
       </View>
     );
+  }
+
+  login(){
+    this.setState({
+      loaded: false
+    });
+
+    app.authWithPassword({
+      "email": this.state.email,
+      "password": this.state.password
+    }, (error, user_data) => {
+
+      this.setState({
+        loaded: true
+      });
+
+      if(error){
+        alert('Login Failed. Please try again');
+      }else{
+        AsyncStorage.setItem('user_data', JSON.stringify(user_data));
+        this.props.navigator.push({
+          component: Account
+        });
+      }
+    });
   }
 }
