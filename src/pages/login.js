@@ -91,4 +91,10 @@ export default class login extends Component {
       }
     });
   }
+
+  goToSignup(){
+    this.props.navigator.push({
+      component: Signup
+    });
+  }
 }
