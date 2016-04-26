@@ -20,3 +20,15 @@ import styles from '../styles/common-styles.js';
 import Firebase from 'firebase';
 
 let app = new Firebase("https://fbauthenticate.firebaseio.com/");
+
+export default class account extends Component {
+
+  constructor(props){
+
+    super(props);
+    this.state = {
+      loaded: false,
+    }
+  }
+  
+}
