@@ -39,6 +39,32 @@ export default class account extends Component {
         loaded: true
       });
     });
+  }
 
+  render(){
+    return (
+      <View style={styles.container}>
+        <Header text="Account" loaded={this.state.loaded} />
+        <View style={styles.body}>
+        {
+          this.state.user &&
+            <View style={styles.body}>
+              <View style={page_styles.email_container}>
+                <Text style={page_styles.email_text}>{this.state.user.password.email}</Text>
+              </View>
+              <Image
+                style={styles.image}
+                source={{uri: this.state.user.password.profileImageURL}}
+              />
+              <Button
+                  text="Logout"
+                  onpress={this.logout.bind(this)}
+                  button_styles={styles.primary_button}
+                  button_text_styles={styles.primary_button_text} />
+            </View>
+        }
+        </View>
+      </View>
+    );
   }
 }
