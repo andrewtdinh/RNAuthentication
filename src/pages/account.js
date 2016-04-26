@@ -30,5 +30,15 @@ export default class account extends Component {
       loaded: false,
     }
   }
-  
+
+  componentWillMount(){
+    AsyncStorage.getItem('user_data').then((user_data_json) => {
+      let user_data = JSON.parse(user_data_json);
+      this.setState({
+        user: user_data,
+        loaded: true
+      });
+    });
+
+  }
 }
