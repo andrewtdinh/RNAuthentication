@@ -67,4 +67,15 @@ export default class account extends Component {
       </View>
     );
   }
+
+  logout(){
+
+    AsyncStorage.removeItem('user_data').then(() => {
+      app.unauth();
+      this.props.navigator.push({
+        component: Login
+      });
+    });
+
+  }
 }
