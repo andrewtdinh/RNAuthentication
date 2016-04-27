@@ -79,3 +79,12 @@ export default class account extends Component {
 
   }
 }
+
+const page_styles = StyleSheet.create({
+  email_container: {
+    padding: 20
+  },
+  email_text: {
+    fontSize: 18
+  }
+});
