@@ -15,7 +15,7 @@ import Header from './src/components/header';
 
 import Firebase from 'firebase';
 
-let app = new Firebase("YOUR-FIREBASE-APP-URL");
+let app = new Firebase("https://fbauthenticate.firebaseio.com/");
 
 import styles from './src/styles/common-styles.js';
 
