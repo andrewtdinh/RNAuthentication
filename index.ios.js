@@ -45,7 +45,30 @@ class rnfirebaseauth extends Component {
         this.setState(component);
       }
     });
-
   }
 
+  render(){
+    if(this.state.component){
+      return (
+        <Navigator
+          initialRoute={{component: this.state.component}}
+          configureScene={() => {
+            return Navigator.SceneConfigs.FloatFromRight;
+          }}
+          renderScene={(route, navigator) => {
+            if(route.component){
+              return React.createElement(route.component, { navigator });
+            }
+          }}
+        />
+      );
+    }else{
+      return (
+        <View style={styles.container}>
+          <Header text="React Native Firebase Auth" loaded={this.state.loaded} />
+          <View style={styles.body}></View>
+        </View>
+      );
+    }
+  }
 }
