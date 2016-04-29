@@ -18,3 +18,14 @@ import Firebase from 'firebase';
 let app = new Firebase("YOUR-FIREBASE-APP-URL");
 
 import styles from './src/styles/common-styles.js';
+
+class rnfirebaseauth extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      component: null,
+      loaded: false
+    };
+  }
+}
