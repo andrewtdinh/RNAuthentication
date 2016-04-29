@@ -72,3 +72,5 @@ class rnfirebaseauth extends Component {
     }
   }
 }
+
+AppRegistry.registerComponent('rnfirebaseauth', () => rnfirebaseauth);
