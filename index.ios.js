@@ -28,4 +28,24 @@ class rnfirebaseauth extends Component {
       loaded: false
     };
   }
+
+  componentWillMount(){
+    AsyncStorage.getItem('user_data').then((user_data_json) => {
+      let user_data = JSON.parse(user_data_json);
+      let component = {component: Signup};
+      if(user_data != null){
+        app.authWithCustomToken(user_data.token, (error, authData) => {
+          if(error){
+            this.setState(component);
+          }else{
+            this.setState({component: Account});
+          }
+        });
+      }else{
+        this.setState(component);
+      }
+    });
+
+  }
+
 }
