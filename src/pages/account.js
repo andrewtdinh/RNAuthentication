@@ -24,7 +24,6 @@ let app = new Firebase("https://fbauthenticate.firebaseio.com/");
 export default class account extends Component {
 
   constructor(props){
-
     super(props);
     this.state = {
       loaded: false,
@@ -69,14 +68,12 @@ export default class account extends Component {
   }
 
   logout(){
-
     AsyncStorage.removeItem('user_data').then(() => {
       app.unauth();
       this.props.navigator.push({
         component: Login
       });
     });
-
   }
 }
 
