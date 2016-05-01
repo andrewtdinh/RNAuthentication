@@ -19,7 +19,7 @@ let app = new Firebase("https://fbauthenticate.firebaseio.com/");
 
 import styles from './src/styles/common-styles.js';
 
-class rnfirebaseauth extends Component {
+class RNFB_Authenticate extends Component {
 
   constructor(props){
     super(props);
@@ -73,4 +73,4 @@ class rnfirebaseauth extends Component {
   }
 }
 
-AppRegistry.registerComponent('rnfirebaseauth', () => rnfirebaseauth);
+AppRegistry.registerComponent('RNFB_Authenticate', () => RNFB_Authenticate);

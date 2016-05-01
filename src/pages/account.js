@@ -85,3 +85,5 @@ const page_styles = StyleSheet.create({
     fontSize: 18
   }
 });
+
+AppRegistry.registerComponent('account', () => account);
