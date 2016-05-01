@@ -2,9 +2,10 @@
 import React, {
   AppRegistry,
   Component,
-  StyleSheet,
   Text,
-  View
+  View,
+  Navigator,
+  AsyncStorage
 } from 'react-native';
 
 class RNFB_Authenticate extends Component {
