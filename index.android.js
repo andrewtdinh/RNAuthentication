@@ -8,6 +8,17 @@ import React, {
   AsyncStorage
 } from 'react-native';
 
+import Signup from './src/pages/signup';
+import Account from './src/pages/account';
+
+import Header from './src/components/header';
+
+import Firebase from 'firebase';
+
+let app = new Firebase("https://fbauthenticate.firebaseio.com/");
+
+import styles from './src/styles/common-styles.js';
+
 class RNFB_Authenticate extends Component {
   render() {
     return (
